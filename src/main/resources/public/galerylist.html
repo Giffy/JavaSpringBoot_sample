@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista de galerias</title>
+</head>
+<body>
+
+	<script type="text/javascript"></script>
+
+	<script>
+		$(function() {
+			$.getJSON('shops', function(data) {
+				$.each(data.person, function(i, f) {
+					var tblRow = "<tr>" + "<td>" + f.shopName + "</td>"
+							+ "<td>" + f.shopId + "</td>" + "<td>"
+							+ f.maxCapacity + "</td>" + "</tr>"
+					$(tblRow).appendTo("#userdata tbody");
+				});
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			$.getJSON("/shops", data);
+
+			// Loop through data.report instead of data
+			for (var i = 0; i < data.report.length; i++) {
+				var tr = $('<tr>');
+
+				// Indexing into data.report for each td element
+				$(tr).append("<td>" + data.report[i].shopName + "</td>");
+				$(tr).append("<td>" + data.report[i].shopId + "</td>");
+				$(tr).append("<td>" + data.report[i].maxCapacity + "</td>");
+				$('.table1').append(tr);
+			}
+		});
+	</script>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<table class="table1" id="userdata" border=2>
+		<tr>
+			<th>Shop ID</th>
+			<th>Name</th>
+			<th>Capacity</th>
+		</tr>
+		<tbody>
+
+		</tbody>
+	</table>
+
+</body>
+</html>

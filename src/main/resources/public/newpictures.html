@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alta de cuadros</title>
+<link href="css/estilo.css" rel="stylesheet">
+</head>
+<body>
+	<h2>Formulario de alta de cuadros</h2>
+    
+    <form name="formulario" action="shops/1/pictures" method="post">
+        <!--  Personal data -->
+        <fieldset>
+            <legend>Datos del cuadro</legend>
+            <div>
+                <div class="bloc">
+                    <label for="name">Titulo</label>
+                    <input name="title" id="name" type="text" placeholder="Escribe el titulo del cuadro" tabindex="1">
+                </div>
+                <div class="bloc">
+                    <label for="authorName">Author name</label>
+                    <input name="authorName" id="authorName" type="text" placeholder="Escribe el nombre del autor" tabindex="2">
+                </div>
+                <div class="bloc">
+                    <label for="price">Precio</label>
+                    <input name="price" id="price" type="number" placeholder="Indicar el precio" tabindex="3">
+                </div>
+            </div>
+        </fieldset>	
+        <button type="submit" value="Submit">ENVIAR</button>
+        <button type="reset">BORRAR</button>
+	</form>
+	
+	<a href="shops/1/pictures">Obtener todos los cuadros</a>
+	<br><br>			
+	<a href="newpictures.html">Crear cuadros</a>
+	
+</body>
+</html>

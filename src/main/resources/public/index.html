@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSon data to HTML</title>
+<link href="css/estilo.css" rel="stylesheet">
+</head>
+<body>
+	<h2>Formulario de alta de tienda</h2>    
+    <form name="formulario" action="shops" method="post">
+        <!--  Personal data -->
+        <fieldset>
+            <legend>Datos de la tienda</legend>
+            <div>
+                <div class="bloc">
+                    <label for="name">Nombre</label>
+                    <input name="shopName" id="name" type="text" placeholder="Escribe el nombre de la tienda" tabindex="1">
+                </div>
+                <div class="bloc">
+                    <label for="capacity">Maxima capacidad</label>
+                    <input name="capacity" id="capacity" type="number" placeholder="Indica la capacidad" tabindex="2">
+                </div>
+            </div>
+        </fieldset>
+	
+	    <button type="submit" value="Submit">ENVIAR</button>
+        <button type="reset">BORRAR</button>
+	</form>
+	
+	<a href="shops">Obtener todas las tiendas</a>
+	<br><br>	
+	<a href="newpictures.html">Crear cuadros</a>
+	</body>
+</html>
